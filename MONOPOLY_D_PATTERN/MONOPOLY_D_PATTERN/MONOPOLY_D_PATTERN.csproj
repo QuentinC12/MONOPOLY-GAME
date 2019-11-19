@@ -49,6 +49,7 @@
     <Compile Include="Community.cs" />
     <Compile Include="Controller.cs" />
     <Compile Include="De.cs" />
+    <Compile Include="Jail.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

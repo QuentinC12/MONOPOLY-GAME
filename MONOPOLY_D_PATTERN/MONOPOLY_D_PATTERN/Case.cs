@@ -10,7 +10,6 @@ namespace MONOPOLY_D_PATTERN
 	{
 		private int id;
 		private int statutCase; //Chance, prison, achetable ou déjà acheté
-		
 		private string nomCase; // Nom exemple rue de la paix
 		
 

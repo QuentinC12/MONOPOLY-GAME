@@ -13,7 +13,7 @@ namespace MONOPOLY_D_PATTERN
 		static int nbPlayer; //nombre de joueurs.
 		static int nbLSuccessiveLaunch; //nombre du lancé;
 		static Player[] listPlayer; //liste des joueurs.
-		
+
 		public Controller()
 		{
 			nbPlayer = nbPlayers();
@@ -23,6 +23,27 @@ namespace MONOPOLY_D_PATTERN
 			initiatePlayers(nbPlayer);
 
 
+		}
+
+		public int Tour		//On veut l'avoir mais pas le set
+			{
+			get { return tour; }
+			}
+
+		static int NbPlayer
+		{
+			get { return nbPlayer; }
+		}
+		static int NbSuccessiveLaunch
+		{
+			get { return nbLSuccessiveLaunch; }
+			set { nbLSuccessiveLaunch = value; }
+		}
+
+		static Player[] ListPlayer
+		{
+			get { return listPlayer; }
+			set { listPlayer = value; }
 		}
 
 		private int nbPlayers()

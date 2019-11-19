@@ -11,7 +11,7 @@ namespace MONOPOLY_D_PATTERN
 		static void Main(string[] args)
 		{
 			Controller Control = new Controller();
-			
+			Board plateau = new Board();
 			
 		}
 
