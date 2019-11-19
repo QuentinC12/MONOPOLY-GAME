@@ -19,5 +19,10 @@ namespace MONOPOLY_D_PATTERN
 				plateau[i] = new Case(); // A IMPLEMENTER
 			}
 		}
+
+		public void viewingBoard()
+		{
+			 //Fonction d'affichage
+		}
 	}
 }
