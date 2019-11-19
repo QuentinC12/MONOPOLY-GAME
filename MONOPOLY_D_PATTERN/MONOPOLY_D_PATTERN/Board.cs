@@ -16,7 +16,7 @@ namespace MONOPOLY_D_PATTERN
 			plateau = new Case[40];
 			for(int i=0;i<40;i++)
 			{
-				plateau[i] = new Case(); // A IMPLEMENTER
+				plateau[i] = new Property(); // A IMPLEMENTER
 			}
 		}
 

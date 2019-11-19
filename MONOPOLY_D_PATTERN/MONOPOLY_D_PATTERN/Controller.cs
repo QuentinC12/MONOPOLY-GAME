@@ -43,18 +43,18 @@ namespace MONOPOLY_D_PATTERN
 			Console.WriteLine("\n\n----------------------------------------------------");
 			Console.WriteLine("You chose to play with "+nbPlayers + " players");
 			Console.WriteLine("----------------------------------------------------\n");
-			Console.WriteLine("Press a key to begin\n");
+			Console.WriteLine("------[Press a key to begin]------\n");
 			Console.ReadKey();
 			for (int i = 0; i<nbPlayers;i++)
 			{
 				Console.Clear();
-				Console.WriteLine("Choose the name of player" + i);
+				Console.Write("Choose the name of the player: " + (i+1)+"\n>");
 				username = Console.ReadLine();
 				listPlayer[i] = new Player(username);
 			}
 			Console.Clear();
 			Console.Write("----------------------------------------------------\n");
-			Console.WriteLine("The " + nbPlayers + " players are well defined\n----Press any key to start playing----");
+			Console.WriteLine("----The " + nbPlayers + " players are well defined----\n----Press any key to start playing----");
 			Console.WriteLine("----------------------------------------------------\n");
 			Console.ReadKey();
 			Console.Clear();
