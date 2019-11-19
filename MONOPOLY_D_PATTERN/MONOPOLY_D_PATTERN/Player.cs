@@ -36,6 +36,17 @@ namespace MONOPOLY_D_PATTERN
 
 		}
 
+		public Player(string username)
+		{
+			nbPlayer++;
+			idPlayer = nbPlayer;
+			position = 0;
+			this.cash = 0;
+			this.statut = 0;
+			this.username = username;
+
+		}
+
 		public override string ToString()
 		{
 			return "Joueur "+username+", A IMPLEMENTER ";

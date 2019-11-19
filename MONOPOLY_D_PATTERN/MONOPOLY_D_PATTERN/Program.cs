@@ -10,7 +10,9 @@ namespace MONOPOLY_D_PATTERN
 	{
 		static void Main(string[] args)
 		{
-			Console.WriteLine("TEST");
+			Controller Control = new Controller();
+			
+			
 		}
 
 		static Board InitialisationBoard()
