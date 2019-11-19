@@ -14,13 +14,5 @@ namespace MONOPOLY_D_PATTERN
 		}
 	}
 
-	class Player
-	{
-		private static int nbPlayer;
-		private int idPlayer;
-		private int position;
-		private int cash;
-		private int statut;
-		private string username;
-	}
+	
 }
