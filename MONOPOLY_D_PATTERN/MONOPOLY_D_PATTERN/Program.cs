@@ -12,6 +12,13 @@ namespace MONOPOLY_D_PATTERN
 		{
 			Console.WriteLine("TEST");
 		}
+
+		static Board InitialisationBoard()
+		{
+			Board plateau = new Board();
+							// A Implementer!
+			return plateau;
+		}
 	}
 
 	

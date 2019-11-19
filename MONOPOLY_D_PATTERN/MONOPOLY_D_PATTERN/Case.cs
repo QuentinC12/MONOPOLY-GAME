@@ -12,5 +12,7 @@ namespace MONOPOLY_D_PATTERN
 		private int etatCase; //1 maison, 2 maison, 3 maison, hotel ou autre.
 		private string nomCase; // Nom exemple rue de la paix
 		private int[] Prix; //tableau de prix genre Prix[0] est sans maison, Prix[1] avec une maison
+
+		//SOIT ON L'INITIALISE AVEC UN CSV NOUS DONNANT CHAQUE CASE SOIT ON REMPLIT EN DUR CHAQUE CASE.
 	}
 }
