@@ -13,4 +13,14 @@ namespace MONOPOLY_D_PATTERN
 			Console.WriteLine("TEST");
 		}
 	}
+
+	class Player
+	{
+		private static int nbPlayer;
+		private int idPlayer;
+		private int position;
+		private int cash;
+		private int statut;
+		private string username;
+	}
 }
