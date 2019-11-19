@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Board.cs" />
     <Compile Include="Case.cs" />
+    <Compile Include="Controller.cs" />
     <Compile Include="De.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />

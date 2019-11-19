@@ -14,5 +14,7 @@ namespace MONOPOLY_D_PATTERN
 		private int[] Prix; //tableau de prix genre Prix[0] est sans maison, Prix[1] avec une maison
 
 		//SOIT ON L'INITIALISE AVEC UN CSV NOUS DONNANT CHAQUE CASE SOIT ON REMPLIT EN DUR CHAQUE CASE.
+
+		//FAIRE LES GETTER AND SETTER
 	}
 }

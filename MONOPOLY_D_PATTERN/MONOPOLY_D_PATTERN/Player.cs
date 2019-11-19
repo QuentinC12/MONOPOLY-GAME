@@ -40,5 +40,6 @@ namespace MONOPOLY_D_PATTERN
 		{
 			return "Joueur "+username+", A IMPLEMENTER ";
 		}
+		//FAIRE LES GETTER AND SETTER
 	}
 }
