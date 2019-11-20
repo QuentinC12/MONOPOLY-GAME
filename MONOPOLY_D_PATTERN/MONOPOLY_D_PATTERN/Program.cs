@@ -10,17 +10,24 @@ namespace MONOPOLY_D_PATTERN
 	{
 		static void Main(string[] args)
 		{
+			bool End = false;
 			Controller Control = new Controller();
 			Board plateau = new Board();
-			
+			while(!End)
+			{
+				//Faire notre partie // Ou alors on peut le mettre dans controller ? à voir 
+			}
 		}
 
-		static Board InitialisationBoard()
+		static void Restart()//Redemarrer une partie
 		{
-			Board plateau = new Board();
-							// A Implementer!
-			return plateau;
+
 		}
+
+		
+
+		
+		
 	}
 
 	
