@@ -14,6 +14,7 @@ namespace MONOPOLY_D_PATTERN
 		private int cash; //Cash qu'à le joueur
 		private int statut; //Statut comme dit auparavant 4 -> 1er tour de prison ... 0 libre.
 		private string username; //Nom du joueur !
+		private Case[] tabProperty;
 
 		public Player()
 		{
@@ -52,5 +53,10 @@ namespace MONOPOLY_D_PATTERN
 			return "Joueur "+username+", A IMPLEMENTER ";
 		}
 		//FAIRE LES GETTER AND SETTER
+		//FAIRE GET SET Du tab Property 
+		public void AddProperty(int idProperty)
+			{
+
+			}
 	}
 }
