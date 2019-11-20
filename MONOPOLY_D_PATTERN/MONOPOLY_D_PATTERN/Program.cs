@@ -10,12 +10,15 @@ namespace MONOPOLY_D_PATTERN
 	{
 		static void Main(string[] args)
 		{
-			bool End = false;
-			Controller Control = new Controller();
-			Board plateau = new Board();
-			while(!End)
+			
+			Controller jeu = new Controller();
+			
+			while(!jeu.VictoryConditions)
 			{
-				//Faire notre partie // Ou alors on peut le mettre dans controller ? à voir 
+				for(int id = 0;id<jeu.NbPlayer;id++)
+				{
+					//jeu.play(id);
+				}
 			}
 		}
 

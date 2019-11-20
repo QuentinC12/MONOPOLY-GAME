@@ -8,6 +8,7 @@ namespace MONOPOLY_D_PATTERN
 {
 	class Player
 	{
+		private static int nbPlayer;
 		private int idPlayer; //Id du player
 		private int position; //position sur le plateau 0-39
 		private int cash; //Cash qu'à le joueur
@@ -17,6 +18,7 @@ namespace MONOPOLY_D_PATTERN
 
 		public Player()
 		{
+			nbPlayer++;
 			idPlayer = nbPlayer;
 			position = 0;
 			cash = 0;
@@ -26,6 +28,7 @@ namespace MONOPOLY_D_PATTERN
 		}
 		public Player(int cash, int statut, string username)
 		{
+			nbPlayer++;
 			idPlayer = nbPlayer;
 			position = 0;
 			this.cash = cash;
@@ -36,6 +39,7 @@ namespace MONOPOLY_D_PATTERN
 
 		public Player(string username)
 		{
+			nbPlayer++;
 			idPlayer = nbPlayer;
 			position = 0;
 			this.cash = 0;

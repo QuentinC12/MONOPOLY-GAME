@@ -9,19 +9,20 @@ namespace MONOPOLY_D_PATTERN
 	class Controller
 	{
 		// CETTE CLASSE SERA UN SINGLETON, ELLE PERMET DE CONTROLLER TOUT LE PROGRAMME.
-		static int tour; //Numero du tour
-		static int nbPlayer; //nombre de joueurs.
-		static int nbLSuccessiveLaunch; //nombre du lancé;
-		static Player[] listPlayer; //liste des joueurs.
+		private  int tour; //Numero du tour
+		private  int nbPlayer; //nombre de joueurs.
+		private  Player[] listPlayer; //liste des joueurs.
+		private  Board plateau;
+		private bool victoryConditions;
 
 		public Controller()
 		{
 			nbPlayer = nbPlayers();
 			tour = 0;
-			nbLSuccessiveLaunch = 0;
 			listPlayer = new Player[nbPlayer];
 			initiatePlayers(nbPlayer);
-
+			plateau = new Board();
+			victoryConditions = false;
 
 		}
 
@@ -30,21 +31,23 @@ namespace MONOPOLY_D_PATTERN
 			get { return tour; }
 			}
 
-		static int NbPlayer
+		public int NbPlayer
 		{
 			get { return nbPlayer; }
 		}
-		static int NbSuccessiveLaunch
-		{
-			get { return nbLSuccessiveLaunch; }
-			set { nbLSuccessiveLaunch = value; }
-		}
 
-		static Player[] ListPlayer
+		public Player[] ListPlayer
 		{
 			get { return listPlayer; }
 			set { listPlayer = value; }
 		}
+
+		public bool VictoryConditions
+		{
+			get { return victoryConditions; }
+		}
+
+
 
 		private int nbPlayers()
 		{
@@ -79,9 +82,15 @@ namespace MONOPOLY_D_PATTERN
 			Console.WriteLine("----------------------------------------------------\n");
 			Console.ReadKey();
 			Console.Clear();
+		}
 
-
-
+		public void jeu(int id)
+		{
+			De mesDe = new De(); //Crée une instance de dés
+			mesDe.PlayDe(); // Va Lancer l'aléatoire et initialiser les variables des dés.
+			//je téma si c'est un double // je rejoue si oui mais je téma si c'est <3 lancés successif//
+			//je regarde sur quelle case je tombe
+			//
 		}
 
 	}
