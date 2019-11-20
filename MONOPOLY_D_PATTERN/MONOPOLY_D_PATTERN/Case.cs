@@ -9,7 +9,7 @@ namespace MONOPOLY_D_PATTERN
 	abstract class Case
 	{
 		private int id;
-		private int statutCase; //Chance, prison, achetable ou déjà acheté
+		private int statutCase; //Chance, communauté, prison, achetable ou déjà acheté
 		private string nomCase; // Nom exemple rue de la paix
 		
 
