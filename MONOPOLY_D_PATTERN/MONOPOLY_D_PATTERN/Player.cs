@@ -8,7 +8,6 @@ namespace MONOPOLY_D_PATTERN
 {
 	class Player
 	{
-		private static int nbPlayer; //Nombre de player total -> Pour ça que static.
 		private int idPlayer; //Id du player
 		private int position; //position sur le plateau 0-39
 		private int cash; //Cash qu'à le joueur
