@@ -17,7 +17,6 @@ namespace MONOPOLY_D_PATTERN
 
 		public Player()
 		{
-			nbPlayer++;  
 			idPlayer = nbPlayer;
 			position = 0;
 			cash = 0;
@@ -27,7 +26,6 @@ namespace MONOPOLY_D_PATTERN
 		}
 		public Player(int cash, int statut, string username)
 		{
-			nbPlayer++;
 			idPlayer = nbPlayer;
 			position = 0;
 			this.cash = cash;
@@ -38,7 +36,6 @@ namespace MONOPOLY_D_PATTERN
 
 		public Player(string username)
 		{
-			nbPlayer++;
 			idPlayer = nbPlayer;
 			position = 0;
 			this.cash = 0;
