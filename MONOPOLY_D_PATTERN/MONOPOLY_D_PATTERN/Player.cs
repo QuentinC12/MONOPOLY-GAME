@@ -26,6 +26,8 @@ namespace MONOPOLY_D_PATTERN
 			username = "unknow";
 
 		}
+
+		
 		public Player(int cash, int statut, string username)
 		{
 			nbPlayer++;
@@ -48,13 +50,38 @@ namespace MONOPOLY_D_PATTERN
 
 		}
 
+		public string Username
+		{
+			get { return username; }
+		}
+
+		public int Statut
+		{
+			get { return statut; }
+		}
+		public int Position
+		{
+			get { return position; }
+		}
+		public void Forward(int nb)
+		{
+			position += nb;
+			if(position>39)
+			{
+				position = position - 39;
+			}
+			if(position == 30)
+			{
+				//Si Case prison on envoi en prison en changeant ID Et tout
+			}
+		}
 		public override string ToString()
 		{
 			return "Joueur "+username+", A IMPLEMENTER ";
 		}
 		//FAIRE LES GETTER AND SETTER
 		//FAIRE GET SET Du tab Property 
-		public void AddProperty(int idProperty)
+		public void AddProperty(int idProperty) //Achat d'une propriete
 			{
 
 			}

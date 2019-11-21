@@ -11,18 +11,28 @@ namespace MONOPOLY_D_PATTERN
 		private int nbLSuccessiveLaunch;
 		private int De1;
 		private int De2;
-		private bool Double;
+		private bool doubler;
+		private bool stop;
 		public De()
 		{
 			nbLSuccessiveLaunch = 0;
 			De1 = 0;
 		    De2 = 0;
-			Double = false;
+			doubler = false;
+			stop = false;
 
 		}
 		//DE 1 et D2;
 		//Nombre de lancés successifs
-
+		public bool Doubler
+		{
+			get { return doubler; }
+		}
+		public bool Stop
+		{
+			get { return stop; }
+			set { stop = value; }
+		}
 		public void initiateLaunch()
 		{
 			//nb de lancés successifs = 0;
@@ -44,16 +54,26 @@ namespace MONOPOLY_D_PATTERN
 			set { nbLSuccessiveLaunch = value; }
 		}
 
-		public void PlayDe()
+		public int PlayDe()
 		{
-			Double = false;
-			De1 = FunctionRandom();
-			De2 = FunctionRandom();
+			doubler = false;
+			// We can't do this because the random is initialize on the clock, if we do that, the values will be the same.
+			//De1 = FunctionRandom();
+			//De2 = FunctionRandom();
+			Random random = new Random();
+			De1 = random.Next(1, 7);
+			De2 = random.Next(1, 7);
 			if (comparateurDouble(De1, De2))
 			{
-				Double = true;
+				doubler = true;
 				nbLSuccessiveLaunch++;
 			}
+			if(nbLSuccessiveLaunch<3)
+			{
+
+			}
+			Console.WriteLine("De 1: " + De1 + "\nDe 2: " + De2 + " ");
+			return De1 + De2;
 		}
 
 		public int FunctionRandom()
@@ -61,6 +81,8 @@ namespace MONOPOLY_D_PATTERN
 			Random random = new Random();
 			return random.Next(1, 7); // donc de 1 à 6
 		}
+
+		
 
 	}
 }

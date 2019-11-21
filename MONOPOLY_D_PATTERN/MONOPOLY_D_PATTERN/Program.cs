@@ -17,8 +17,10 @@ namespace MONOPOLY_D_PATTERN
 			{
 				for(int id = 0;id<jeu.NbPlayer;id++)
 				{
-					//jeu.play(id);
+					jeu.VerifStatut(id);
+					
 				}
+				jeu.Tour++;
 			}
 		}
 

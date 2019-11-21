@@ -29,7 +29,8 @@ namespace MONOPOLY_D_PATTERN
 		public int Tour		//On veut l'avoir mais pas le set
 			{
 			get { return tour; }
-			}
+			set { tour=value; }
+		}
 
 		public int NbPlayer
 		{
@@ -84,10 +85,50 @@ namespace MONOPOLY_D_PATTERN
 			Console.Clear();
 		}
 
-		public void jeu(int id)
+		public void VerifStatut(int id)
 		{
-			De mesDe = new De(); //Crée une instance de dés
-			mesDe.PlayDe(); // Va Lancer l'aléatoire et initialiser les variables des dés.
+			if(listPlayer[id].Statut==0)
+			{
+				play(id); // Fonction pour lancer les dés et jouer
+			}
+			else
+			{
+				//Fonction pour lancer le dé et essayer de sortir de prison
+			}
+		}
+		public void play(int id)
+		{
+			De mesDe = new De();
+			int forward = 0;
+			do
+			{
+				Console.Clear();
+			Console.WriteLine("----------------------------------------------------");
+			Console.WriteLine("Tour: "+tour);
+			Console.WriteLine("It's the turn of: "+listPlayer[id].Username);
+			Console.WriteLine("Position on the board: " +listPlayer[id].Position);
+			Console.WriteLine("----------------------------------------------------");
+			Console.ReadKey();
+			//Crée une instance de dés
+			
+				forward = mesDe.PlayDe();
+				if (mesDe.NbSuccessiveLaunch == 3)
+				{
+					mesDe.Stop = true;
+					//Position = prison !
+				}
+				else
+				{
+					listPlayer[id].Forward(forward);
+				}
+				if (mesDe.Doubler) { Console.WriteLine("You did a double, it's still your turn !"); }
+				Console.ReadKey();
+			} while (mesDe.Doubler && !mesDe.Stop);
+			
+			
+				
+			
+			 // Va Lancer l'aléatoire et initialiser les variables des dés.
 			//je téma si c'est un double // je rejoue si oui mais je téma si c'est <3 lancés successif//
 			//je regarde sur quelle case je tombe
 			//
