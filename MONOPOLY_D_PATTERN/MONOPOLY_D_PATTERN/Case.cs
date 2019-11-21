@@ -20,6 +20,8 @@ namespace MONOPOLY_D_PATTERN
         }
 		//SOIT ON L'INITIALISE AVEC UN CSV NOUS DONNANT CHAQUE CASE SOIT ON REMPLIT EN DUR CHAQUE CASE.
 
-		//FAIRE LES GETTER AND SETTER
+		public abstract int Id { get; }
+        public abstract string StateCase { get; }
+        public abstract string NameCase { get; }
 	}
 }

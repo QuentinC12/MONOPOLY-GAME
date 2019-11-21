@@ -29,11 +29,11 @@ namespace MONOPOLY_D_PATTERN
 			{
 				if (i == 9)
 				{
-					plateau[i] = new Jail();
+					//plateau[i] = new Jail();
 				}
 				else
 				{
-					plateau[i] = new Property(); // A IMPLEMENTER
+					//plateau[i] = new Property(); // A IMPLEMENTER
 				}
 
 			}
