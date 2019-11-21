@@ -93,7 +93,7 @@ namespace MONOPOLY_D_PATTERN
 			}
 			else
 			{
-				//Fonction pour lancer le dé et essayer de sortir de prison
+				Console.WriteLine("YOU ARE IN JAIL");//Fonction pour lancer le dé et essayer de sortir de prison
 			}
 		}
 		public void play(int id)
@@ -115,7 +115,8 @@ namespace MONOPOLY_D_PATTERN
 				if (mesDe.NbSuccessiveLaunch == 3)
 				{
 					mesDe.Stop = true;
-					//Position = prison !
+					listPlayer[id].Position = 10;
+					listPlayer[id].Statut = 3;
 				}
 				else
 				{

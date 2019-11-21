@@ -58,10 +58,12 @@ namespace MONOPOLY_D_PATTERN
 		public int Statut
 		{
 			get { return statut; }
+			set { statut = value; }
 		}
 		public int Position
 		{
 			get { return position; }
+			set { position = value; }
 		}
 		public void Forward(int nb)
 		{
@@ -72,6 +74,8 @@ namespace MONOPOLY_D_PATTERN
 			}
 			if(position == 30)
 			{
+				position = 10;
+				statut = 3;
 				//Si Case prison on envoi en prison en changeant ID Et tout
 			}
 		}
