@@ -93,7 +93,8 @@ namespace MONOPOLY_D_PATTERN
 			}
 			else
 			{
-				Console.WriteLine("YOU ARE IN JAIL");//Fonction pour lancer le dé et essayer de sortir de prison
+				jail(id);
+				Console.ReadKey();
 			}
 		}
 		public void play(int id)
@@ -108,7 +109,7 @@ namespace MONOPOLY_D_PATTERN
 			Console.WriteLine("It's the turn of: "+listPlayer[id].Username);
 			Console.WriteLine("Position on the board: " +listPlayer[id].Position);
 			Console.WriteLine("----------------------------------------------------");
-			Console.ReadKey();
+			//Console.ReadKey(); //A METTRE OU PAS ?
 			//Crée une instance de dés
 			
 				forward = mesDe.PlayDe();
@@ -125,14 +126,17 @@ namespace MONOPOLY_D_PATTERN
 				if (mesDe.Doubler) { Console.WriteLine("You did a double, it's still your turn !"); }
 				Console.ReadKey();
 			} while (mesDe.Doubler && !mesDe.Stop);
-			
-			
-				
-			
-			 // Va Lancer l'aléatoire et initialiser les variables des dés.
-			//je téma si c'est un double // je rejoue si oui mais je téma si c'est <3 lancés successif//
-			//je regarde sur quelle case je tombe
-			//
+		}
+
+		public void jail(int id)
+		{
+			Console.Clear();
+			Console.WriteLine("----------------------------------------------------");
+			Console.WriteLine("Tour: " + tour);
+			Console.WriteLine("It's the turn of: " + listPlayer[id].Username);
+			Console.WriteLine("You are in jail since " + (3 - listPlayer[id].Statut + " turn"));
+			Console.WriteLine("----------------------------------------------------");
+			//Fonction pour lancer le dé et essayer de sortir de prison
 		}
 
 	}
