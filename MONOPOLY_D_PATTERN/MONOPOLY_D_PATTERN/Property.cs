@@ -48,6 +48,8 @@ namespace MONOPOLY_D_PATTERN
             get { return this.prix; }
         }
 
+        
+            
     }
 }
 

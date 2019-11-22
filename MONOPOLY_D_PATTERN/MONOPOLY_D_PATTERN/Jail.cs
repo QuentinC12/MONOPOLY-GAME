@@ -1,5 +1,5 @@
 ﻿using System;
-namespace MONOPOLY_D_PATTERN.Properties
+namespace MONOPOLY_D_PATTERN
 {
     class Jail : Case
     {
@@ -20,6 +20,10 @@ namespace MONOPOLY_D_PATTERN.Properties
         public override string NameCase
         {
             get { return this.nameCase; }
+        }
+        public override string ToString()
+        {
+            return "You are on case number " + this.id + " .The name of the case is : " + this.nameCase;
         }
     }
 }
