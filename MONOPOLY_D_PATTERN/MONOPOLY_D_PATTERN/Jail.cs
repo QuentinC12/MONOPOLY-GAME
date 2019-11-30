@@ -21,7 +21,8 @@ namespace MONOPOLY_D_PATTERN
         {
             get { return this.nameCase; }
         }
-        public override string ToString()
+		
+		public override string ToString()
         {
             return "You are on case number " + this.id + " .The name of the case is : " + this.nameCase;
         }

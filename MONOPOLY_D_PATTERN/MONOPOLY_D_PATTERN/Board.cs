@@ -71,6 +71,8 @@ namespace MONOPOLY_D_PATTERN
 		{
 			return plateau[numCase].StateCase;
 		}
+
+	
 		
         public Case[] Plateau
         {

@@ -126,7 +126,13 @@ namespace MONOPOLY_D_PATTERN
 					listPlayer[id].Forward(forward);
 				}
 				if (mesDe.Doubler) { Console.WriteLine("You did a double, it's still your turn !"); }
-				Console.ReadKey();
+				Console.WriteLine("You're now on position: "+ listPlayer[id].Position+" -> " + plateau.nameCase(listPlayer[id].Position));
+				Console.WriteLine("----------------------------------------------------");
+				if(plateau.typeCase(listPlayer[id].Position) == "P" )
+				{
+					Console.WriteLine("Faire verifs supplementaires -> si possedé : rien | si possedé par soi : Vendre | si pas possedé : acheter");
+				}
+					Console.ReadKey();
 			} while (mesDe.Doubler && !mesDe.Stop);
 		}
 

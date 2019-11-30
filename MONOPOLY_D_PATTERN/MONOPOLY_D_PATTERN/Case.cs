@@ -23,7 +23,7 @@ namespace MONOPOLY_D_PATTERN
 		public abstract int Id { get; }
         public abstract string StateCase { get; }
         public abstract string NameCase { get; }
+		
 
-       
 	}
 }
