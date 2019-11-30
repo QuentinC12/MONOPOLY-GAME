@@ -107,7 +107,7 @@ namespace MONOPOLY_D_PATTERN
 			Console.WriteLine("----------------------------------------------------");
 			Console.WriteLine("Tour: "+tour);
 			Console.WriteLine("It's the turn of: "+listPlayer[id].Username);
-			Console.WriteLine("Position on the board: " +listPlayer[id].Position);
+			Console.WriteLine("Position on the board: " +listPlayer[id].Position + " - " + plateau.typeCase(listPlayer[id].Position) );
 			Console.WriteLine("----------------------------------------------------");
 			//Console.ReadKey(); //A METTRE OU PAS ?
 			//Crée une instance de dés
@@ -130,12 +130,16 @@ namespace MONOPOLY_D_PATTERN
 
 		public void jail(int id)
 		{
+			listPlayer[id].Statut--;
+			if (listPlayer[id].Statut == 0) { }
+			else { 
 			Console.Clear();
 			Console.WriteLine("----------------------------------------------------");
 			Console.WriteLine("Tour: " + tour);
 			Console.WriteLine("It's the turn of: " + listPlayer[id].Username);
 			Console.WriteLine("You are in jail since " + (3 - listPlayer[id].Statut + " turn"));
 			Console.WriteLine("----------------------------------------------------");
+			}
 			//Fonction pour lancer le dé et essayer de sortir de prison
 		}
 
