@@ -62,9 +62,14 @@ namespace MONOPOLY_D_PATTERN
             }
             return data;
         }
-		public string typeCase(int numCase)
+		public string nameCase(int numCase)
 		{
 			 return plateau[numCase].NameCase;
+		}
+
+		public string typeCase(int numCase)
+		{
+			return plateau[numCase].StateCase;
 		}
 		
         public Case[] Plateau

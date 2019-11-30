@@ -18,7 +18,7 @@ namespace MONOPOLY_D_PATTERN
             this.stateCase=stateCase;
             this.nameCase = name;
         }
-		//SOIT ON L'INITIALISE AVEC UN CSV NOUS DONNANT CHAQUE CASE SOIT ON REMPLIT EN DUR CHAQUE CASE.
+		
 
 		public abstract int Id { get; }
         public abstract string StateCase { get; }

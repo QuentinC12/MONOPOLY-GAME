@@ -15,7 +15,7 @@ namespace MONOPOLY_D_PATTERN
         }
         public override string StateCase
         {
-            get { return this.StateCase; }
+            get { return this.stateCase; }
         }
         public override string NameCase
         {

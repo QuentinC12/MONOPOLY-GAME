@@ -94,11 +94,12 @@ namespace MONOPOLY_D_PATTERN
 			else
 			{
 				jail(id);
-				Console.ReadKey();
+				
 			}
 		}
 		public void play(int id)
 		{
+			
 			De mesDe = new De();
 			int forward = 0;
 			do
@@ -107,11 +108,12 @@ namespace MONOPOLY_D_PATTERN
 			Console.WriteLine("----------------------------------------------------");
 			Console.WriteLine("Tour: "+tour);
 			Console.WriteLine("It's the turn of: "+listPlayer[id].Username);
-			Console.WriteLine("Position on the board: " +listPlayer[id].Position + " - " + plateau.typeCase(listPlayer[id].Position) );
+			Console.WriteLine("Position on the board: " +listPlayer[id].Position + " - " + plateau.nameCase(listPlayer[id].Position)+ " - "+ plateau.typeCase(listPlayer[id].Position));
 			Console.WriteLine("----------------------------------------------------");
-			//Console.ReadKey(); //A METTRE OU PAS ?
-			//Crée une instance de dés
-			
+				//Console.ReadKey(); //A METTRE OU PAS ?
+				//Crée une instance de dés
+				Console.WriteLine("Press any touch to launch the de");
+				Console.ReadKey();
 				forward = mesDe.PlayDe();
 				if (mesDe.NbSuccessiveLaunch == 3)
 				{
@@ -131,7 +133,21 @@ namespace MONOPOLY_D_PATTERN
 		public void jail(int id)
 		{
 			listPlayer[id].Statut--;
-			if (listPlayer[id].Statut == 0) { }
+			De mesDe = new De();
+			if (listPlayer[id].Statut == 0) {
+				Console.Clear();
+				Console.WriteLine("----------------------------------------------------");
+				Console.WriteLine("Tour: " + tour);
+				Console.WriteLine("It's the turn of: " + listPlayer[id].Username);
+				Console.WriteLine("You are in jail since " + (3 - listPlayer[id].Statut + " turn"));
+				Console.WriteLine("You're now free from jail ! ");
+				Console.WriteLine("Press any touch to launch the de");
+				Console.ReadKey();
+				
+				int forward = mesDe.PlayDe();
+				ListPlayer[id].Forward(forward);
+				Console.WriteLine("----------------------------------------------------");
+			}
 			else { 
 			Console.Clear();
 			Console.WriteLine("----------------------------------------------------");
@@ -139,6 +155,15 @@ namespace MONOPOLY_D_PATTERN
 			Console.WriteLine("It's the turn of: " + listPlayer[id].Username);
 			Console.WriteLine("You are in jail since " + (3 - listPlayer[id].Statut + " turn"));
 			Console.WriteLine("----------------------------------------------------");
+				Console.WriteLine("Do a double or stay until 3 turn !");
+				Console.WriteLine("Press any touch to launch the de");
+				Console.ReadKey();
+				mesDe.PlayDe();
+				if (mesDe.Doubler) { listPlayer[id].Statut = 0;
+					Console.WriteLine("You did a double, you're free now");
+				}
+				else { Console.WriteLine("You failed, you stay in jail"); }
+				Console.ReadKey();
 			}
 			//Fonction pour lancer le dé et essayer de sortir de prison
 		}
