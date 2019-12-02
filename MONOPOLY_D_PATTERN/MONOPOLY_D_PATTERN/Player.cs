@@ -55,6 +55,13 @@ namespace MONOPOLY_D_PATTERN
 			get { return username; }
 		}
 
+		public int Cash
+		{
+			get { return cash; }
+			set {  cash = value; }
+		}
+
+
 		public int Statut
 		{
 			get { return statut; }

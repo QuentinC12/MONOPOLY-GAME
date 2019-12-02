@@ -108,12 +108,13 @@ namespace MONOPOLY_D_PATTERN
 			Console.WriteLine("----------------------------------------------------");
 			Console.WriteLine("Tour: "+tour);
 			Console.WriteLine("It's the turn of: "+listPlayer[id].Username);
-			Console.WriteLine("Position on the board: " +listPlayer[id].Position + " - " + plateau.nameCase(listPlayer[id].Position)+ " - "+ plateau.typeCase(listPlayer[id].Position));
+			Console.WriteLine("Position on the board: " +listPlayer[id].Position + " - " + plateau.nameCase(listPlayer[id].Position)+ " - Cash: "+ listPlayer[id].Cash);
 			Console.WriteLine("----------------------------------------------------");
 				//Console.ReadKey(); //A METTRE OU PAS ?
 				//Crée une instance de dés
 				Console.WriteLine("Press any touch to launch the de");
 				Console.ReadKey();
+				Console.WriteLine("-");
 				forward = mesDe.PlayDe();
 				if (mesDe.NbSuccessiveLaunch == 3)
 				{
