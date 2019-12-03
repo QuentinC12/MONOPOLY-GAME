@@ -14,7 +14,7 @@ namespace MONOPOLY_D_PATTERN
 		private int cash; //Cash qu'à le joueur
 		private int statut; //Statut comme dit auparavant 4 -> 1er tour de prison ... 0 libre.
 		private string username; //Nom du joueur !
-		private Case[] tabProperty; //Liste des propriétés possédées
+		//private Case[] tabProperty; //Liste des propriétés possédées
 
 		public Player()
 		{

@@ -147,7 +147,7 @@ namespace MONOPOLY_D_PATTERN
 					else
 					{
 						Console.WriteLine("IL FAUT POUVOIR ACHETER");
-
+						
 					}
 
 

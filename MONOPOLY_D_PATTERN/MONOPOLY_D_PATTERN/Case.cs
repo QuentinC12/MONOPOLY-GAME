@@ -46,5 +46,7 @@ namespace MONOPOLY_D_PATTERN
 			set { nbHouse = value; }
 		}
 
+		 
+
 	}
 }

@@ -79,5 +79,6 @@ namespace MONOPOLY_D_PATTERN
             get { return this.plateau; }
             set { plateau = value; }
         }
+		
     }
 }
