@@ -50,7 +50,7 @@ namespace MONOPOLY_D_PATTERN
         }
         public List<string[]> ReadFile()
         {
-            StreamReader sr = new StreamReader("C:/Users/qcall/Documents/GitHub/MONOPOLY-GAME/MONOPOLY_D_PATTERN/MONOPOLY_D_PATTERN/bin/Debug/Monop.csv");
+            StreamReader sr = new StreamReader("Monop.csv");
             string line;
             string[] row = new string[11];
             List<string[]> data = new List<string[]>();

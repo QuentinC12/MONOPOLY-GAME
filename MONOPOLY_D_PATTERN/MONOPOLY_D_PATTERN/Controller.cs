@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -129,9 +129,10 @@ namespace MONOPOLY_D_PATTERN
 				if (mesDe.Doubler) { Console.WriteLine("You did a double, it's still your turn !"); }
 				Console.WriteLine("You're now on position: "+ listPlayer[id].Position+" -> " + plateau.nameCase(listPlayer[id].Position));
 				Console.WriteLine("----------------------------------------------------");
-				if(plateau.typeCase(listPlayer[id].Position) == "P" )
+				if(plateau.Plateau[listPlayer[id].Position] is Property )
 				{
-					if(plateau.Plateau[listPlayer[id].Position].Owned)
+                    Property P = (MONOPOLY_D_PATTERN.Property)plateau.Plateau[listPlayer[id].Position];
+                    if (plateau.Plateau[listPlayer[id].Position].Owned)
 					{
 						if(plateau.Plateau[listPlayer[id].Position].IDOwner == id)
 						{
@@ -146,10 +147,22 @@ namespace MONOPOLY_D_PATTERN
 					}
 					else
 					{
-						Console.WriteLine("IL FAUT POUVOIR ACHETER");
+						
+                        if (listPlayer[id].Cash >= P.Prix[6])
+                        {
+                            Console.WriteLine("Tu peux acheter");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Tu as pas assez");
+                        }
 						
 					}
 
+
+
+                    
+					
 
 				}
 					Console.ReadKey();
