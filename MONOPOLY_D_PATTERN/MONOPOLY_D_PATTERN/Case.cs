@@ -12,12 +12,16 @@ namespace MONOPOLY_D_PATTERN
 		protected string stateCase; //Chance, communauté, prison, (achetable ou déjà acheté ça non ça sera ailleurs) 
 		protected string nameCase; // Nom exemple rue de la paix
 		private bool owned;
+		private int idOwner;
+		private int nbHouse;
 		public Case(int id,string stateCase, string name)
         {
             this.id = id;
             this.stateCase=stateCase;
             this.nameCase = name;
 			this.owned = false;
+			this.idOwner =-1;
+			this.nbHouse = 0;
 		}
 		
 
@@ -29,6 +33,17 @@ namespace MONOPOLY_D_PATTERN
 		{
 			get { return owned; }
 			set { owned = value; }
+		}
+		public int IDOwner
+		{
+			get { return idOwner; }
+			set { idOwner = value; }
+		}
+
+		public int NbHouse
+		{
+			get { return nbHouse; }
+			set { nbHouse = value; }
 		}
 
 	}

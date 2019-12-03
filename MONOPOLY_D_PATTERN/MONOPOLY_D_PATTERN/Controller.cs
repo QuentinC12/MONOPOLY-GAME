@@ -133,12 +133,20 @@ namespace MONOPOLY_D_PATTERN
 				{
 					if(plateau.Plateau[listPlayer[id].Position].Owned)
 					{
-						//FAIRE VERIF SI C'EST MOI QUI POSSEDE;
-						// ELSE JE DOIS PAYER LE JOUEUR.
+						if(plateau.Plateau[listPlayer[id].Position].IDOwner == id)
+						{
+							Console.WriteLine(" CONSTRUIRE MA MAISON OU NON");
+
+						}
+						else
+						{
+							Console.WriteLine(" JE DOIS PAYER LE JOUEUR. ");
+						}
+
 					}
 					else
 					{
-						//IL FAUT POUVOIR ACHETER
+						Console.WriteLine("IL FAUT POUVOIR ACHETER");
 
 					}
 
@@ -176,8 +184,9 @@ namespace MONOPOLY_D_PATTERN
 				Console.WriteLine("Do a double or stay until 3 turn !");
 				Console.WriteLine("Press any touch to launch the dice");
 				Console.ReadKey();
-				mesDe.PlayDe();
+				int forward = mesDe.PlayDe();
 				if (mesDe.Doubler) { listPlayer[id].Statut = 0;
+					ListPlayer[id].Forward(forward);
 					Console.WriteLine("You did a double, you're free now");
 				}
 				else { Console.WriteLine("You failed, you stay in jail"); }

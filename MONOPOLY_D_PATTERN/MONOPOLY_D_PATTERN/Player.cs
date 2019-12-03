@@ -21,7 +21,7 @@ namespace MONOPOLY_D_PATTERN
 			nbPlayer++;
 			idPlayer = nbPlayer;
 			position = 0;
-			cash = 0;
+			cash = 400;
 			statut = 0;
 			username = "unknow";
 
@@ -44,7 +44,7 @@ namespace MONOPOLY_D_PATTERN
 			nbPlayer++;
 			idPlayer = nbPlayer;
 			position = 0;
-			this.cash = 0;
+			this.cash = 400;
 			this.statut = 0;
 			this.username = username;
 
@@ -77,13 +77,14 @@ namespace MONOPOLY_D_PATTERN
 			position += nb;
 			if(position>39)
 			{
+				cash = cash + 200;
 				position = position - 39;
 			}
 			if(position == 30)
 			{
 				position = 10;
 				statut = 3;
-				//Si Case prison on envoi en prison en changeant ID Et tout
+				
 			}
 		}
 		public override string ToString()
