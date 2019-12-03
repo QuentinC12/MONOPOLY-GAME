@@ -136,12 +136,34 @@ namespace MONOPOLY_D_PATTERN
 					{
 						if(P.IDOwner == id)
 						{
-							Console.WriteLine(" CONSTRUIRE MA MAISON OU NON");
+							Console.WriteLine("Press SOLD(s) to sold the property | BUY(b) house | (escape) to end the turn");
+							ConsoleKeyInfo saisie;
+							do
+							{
+								saisie = Console.ReadKey();
+								if(saisie.Key != ConsoleKey.S && saisie.Key != ConsoleKey.B && saisie.Key != ConsoleKey.Escape)
+								{
+									Console.WriteLine("Please press the good touch");
+								}
+							} while (saisie.Key != ConsoleKey.S && saisie.Key != ConsoleKey.B && saisie.Key != ConsoleKey.Escape);
+							if(saisie.Key == ConsoleKey.S)
+								{
+										// S'il veut acheter maison
+								}
+							if(saisie.Key == ConsoleKey.B)
+							{
+										// si non
+								}
+							if(saisie.Key == ConsoleKey.Escape)
+							{
+
+							}
 
 						}
 						else
 						{
-							Console.WriteLine(" Owned by:  ");
+							Console.WriteLine("Owned by:  "+listPlayer[P.IDOwner].Username+"\nYou need to pay: "+ P.Prix[P.NbHouse]);
+
 						}
 
 					}
@@ -150,11 +172,33 @@ namespace MONOPOLY_D_PATTERN
 						
                         if (listPlayer[id].Cash >= P.Prix[6])
                         {
-                            Console.WriteLine("You can afford this property");
+                            Console.WriteLine("You can afford this property for "+ P.Prix[6] + " euros");
+							Console.WriteLine("PRESS [ENTER] TO BUY | [ESCAPE] to cancel");
+
+							ConsoleKeyInfo saisie;
+							do
+							{
+								 saisie = Console.ReadKey();
+								}while(saisie.Key != ConsoleKey.Enter && saisie.Key != ConsoleKey.Escape);
+								if(saisie.Key == ConsoleKey.Enter)
+								{
+								P.IDOwner = id;
+								P.Owned = true;
+								listPlayer[id].Cash = listPlayer[id].Cash - P.Prix[6];
+
+								Console.WriteLine("You're now owner of: " + plateau.nameCase(listPlayer[id].Position));
+								}
+								else
+									{
+								Console.WriteLine("You refused to buy " + plateau.nameCase(listPlayer[id].Position));
+									}
+
+							
+								
                         }
                         else
                         {
-                            Console.WriteLine("You can't afford this property.");
+                            Console.WriteLine("You can't afford this property. The price: "+ P.Prix[6]);
                         }
 						
 					}
