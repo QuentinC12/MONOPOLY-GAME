@@ -112,7 +112,7 @@ namespace MONOPOLY_D_PATTERN
 			Console.WriteLine("----------------------------------------------------");
 				//Console.ReadKey(); //A METTRE OU PAS ?
 				//Crée une instance de dés
-				Console.WriteLine("Press any touch to launch the de");
+				Console.WriteLine("Press any touch to launch the dice");
 				Console.ReadKey();
 				Console.WriteLine("-");
 				forward = mesDe.PlayDe();
@@ -131,7 +131,18 @@ namespace MONOPOLY_D_PATTERN
 				Console.WriteLine("----------------------------------------------------");
 				if(plateau.typeCase(listPlayer[id].Position) == "P" )
 				{
-					Console.WriteLine("Faire verifs supplementaires -> si possedé : rien | si possedé par soi : Vendre | si pas possedé : acheter");
+					if(plateau.Plateau[listPlayer[id].Position].Owned)
+					{
+						//FAIRE VERIF SI C'EST MOI QUI POSSEDE;
+						// ELSE JE DOIS PAYER LE JOUEUR.
+					}
+					else
+					{
+						//IL FAUT POUVOIR ACHETER
+
+					}
+
+
 				}
 					Console.ReadKey();
 			} while (mesDe.Doubler && !mesDe.Stop);
@@ -148,7 +159,7 @@ namespace MONOPOLY_D_PATTERN
 				Console.WriteLine("It's the turn of: " + listPlayer[id].Username);
 				Console.WriteLine("You are in jail since " + (3 - listPlayer[id].Statut + " turn"));
 				Console.WriteLine("You're now free from jail ! ");
-				Console.WriteLine("Press any touch to launch the de");
+				Console.WriteLine("Press any touch to launch the dice");
 				Console.ReadKey();
 				
 				int forward = mesDe.PlayDe();
@@ -163,7 +174,7 @@ namespace MONOPOLY_D_PATTERN
 			Console.WriteLine("You are in jail since " + (3 - listPlayer[id].Statut + " turn"));
 			Console.WriteLine("----------------------------------------------------");
 				Console.WriteLine("Do a double or stay until 3 turn !");
-				Console.WriteLine("Press any touch to launch the de");
+				Console.WriteLine("Press any touch to launch the dice");
 				Console.ReadKey();
 				mesDe.PlayDe();
 				if (mesDe.Doubler) { listPlayer[id].Statut = 0;

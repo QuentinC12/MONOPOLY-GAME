@@ -11,14 +11,14 @@ namespace MONOPOLY_D_PATTERN
         private int etatCase; //O rien 1 maison, 2 maison, 3 maison, hotel ou autre.
         private int idPlayerOwner; //mettre en -1 à la création| -1 = pas de owner / sinon hop l'id du owner
         private int[] prix; //tableau de prix genre Prix[0] est sans maison, Prix[1] avec une maison
-		private bool owned;
+		
 
         public Property(int id, string stateCase, string name, int[] prix) : base(id, stateCase, name)
         {
             this.etatCase = 0;
             this.idPlayerOwner = -1;
             this.prix = prix;
-			this.owned = false;
+			
         }
         public override int Id
         {
@@ -51,6 +51,8 @@ namespace MONOPOLY_D_PATTERN
         }
 
 		
+
+
 
 	}
 }
