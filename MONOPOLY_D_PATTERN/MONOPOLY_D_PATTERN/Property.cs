@@ -9,7 +9,6 @@ namespace MONOPOLY_D_PATTERN
     class Property : Case
     {
         private int etatCase; //O rien 1 maison, 2 maison, 3 maison, hotel ou autre.
-        private int idPlayerOwner; //mettre en -1 à la création| -1 = pas de owner / sinon hop l'id du owner
         private int[] prix; //tableau de prix genre Prix[0] est sans maison, Prix[1] avec une maison
         private bool owned;
         private int idOwner;
@@ -18,7 +17,6 @@ namespace MONOPOLY_D_PATTERN
         public Property(int id, string stateCase, string name, int[] prix) : base(id, stateCase, name)
         {
             this.etatCase = 0;
-            this.idPlayerOwner = -1;
             this.prix = prix;
             this.owned = false;
             this.idOwner = -1;
@@ -44,11 +42,6 @@ namespace MONOPOLY_D_PATTERN
         {
             get { return this.etatCase; }
             set { this.etatCase = value; }
-        }
-        public int IdPlayerOwner
-        {
-            get { return this.idPlayerOwner; }
-            set { this.idPlayerOwner = value; }
         }
         public int[] Prix
         {
