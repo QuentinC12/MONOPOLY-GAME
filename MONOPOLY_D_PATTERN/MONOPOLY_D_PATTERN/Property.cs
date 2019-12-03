@@ -9,7 +9,7 @@ namespace MONOPOLY_D_PATTERN
     class Property : Case
     {
         private int etatCase; //O rien 1 maison, 2 maison, 3 maison, hotel ou autre.
-        private int[] prix; //tableau de prix genre Prix[0] est sans maison, Prix[1] avec une maison
+        private int[] prix; //0 maison 1 maison 2 maison 3 maison 4 maison 5 hotel 6 prix achat 7 prix d'une maison
         private bool owned;
         private int idOwner;
         private int nbHouse;

@@ -132,16 +132,16 @@ namespace MONOPOLY_D_PATTERN
 				if(plateau.Plateau[listPlayer[id].Position] is Property )
 				{
                     Property P = (MONOPOLY_D_PATTERN.Property)plateau.Plateau[listPlayer[id].Position];
-                    if (plateau.Plateau[listPlayer[id].Position].Owned)
+                    if (P.Owned)
 					{
-						if(plateau.Plateau[listPlayer[id].Position].IDOwner == id)
+						if(P.IDOwner == id)
 						{
 							Console.WriteLine(" CONSTRUIRE MA MAISON OU NON");
 
 						}
 						else
 						{
-							Console.WriteLine(" JE DOIS PAYER LE JOUEUR. ");
+							Console.WriteLine(" Owned by:  ");
 						}
 
 					}
@@ -150,11 +150,11 @@ namespace MONOPOLY_D_PATTERN
 						
                         if (listPlayer[id].Cash >= P.Prix[6])
                         {
-                            Console.WriteLine("Tu peux acheter");
+                            Console.WriteLine("You can afford this property");
                         }
                         else
                         {
-                            Console.WriteLine("Tu as pas assez");
+                            Console.WriteLine("You can't afford this property.");
                         }
 						
 					}
