@@ -14,6 +14,8 @@ namespace MONOPOLY_D_PATTERN
 		private int cash; //Cash qu'à le joueur
 		private int statut; //Statut comme dit auparavant 4 -> 1er tour de prison ... 0 libre.
 		private string username; //Nom du joueur !
+		private int nbGare;
+		private int cashDepart = 1500;
 		
 		//private Case[] tabProperty; //Liste des propriétés possédées
 
@@ -22,9 +24,10 @@ namespace MONOPOLY_D_PATTERN
 			nbPlayer++;
 			idPlayer = nbPlayer;
 			position = 0;
-			cash = 400;
+			cash = cashDepart;
 			statut = 0;
 			username = "unknow";
+			nbGare = 0;
 
 		}
 
@@ -37,6 +40,7 @@ namespace MONOPOLY_D_PATTERN
 			this.cash = cash;
 			this.statut = statut;
 			this.username = username;
+			nbGare = 0;
 
 		}
 
@@ -45,9 +49,10 @@ namespace MONOPOLY_D_PATTERN
 			nbPlayer++;
 			idPlayer = nbPlayer;
 			position = 0;
-			this.cash = 400;
+			this.cash = cashDepart;
 			this.statut = 0;
 			this.username = username;
+			nbGare = 0;
 
 		}
 
@@ -73,6 +78,12 @@ namespace MONOPOLY_D_PATTERN
 			get { return position; }
 			set { position = value; }
 		}
+
+		public int NbGare
+			{
+			get{return nbGare;}
+			set{nbGare=value;}
+			}
 		public void Forward(int nb)
 		{
 			position += nb;
@@ -88,6 +99,7 @@ namespace MONOPOLY_D_PATTERN
 				
 			}
 		}
+
 		public override string ToString()
 		{
 			return "Joueur "+username+", A IMPLEMENTER ";

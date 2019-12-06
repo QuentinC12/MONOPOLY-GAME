@@ -148,22 +148,47 @@ namespace MONOPOLY_D_PATTERN
 							} while (saisie.Key != ConsoleKey.S && saisie.Key != ConsoleKey.B && saisie.Key != ConsoleKey.Escape);
 							if(saisie.Key == ConsoleKey.S)
 								{
-										// S'il veut acheter maison
+								Console.WriteLine("You solded your property: " + P.NameCase + " for " + P.Prix[6]);
+								P.NbHouse = 0;
+								P.IDOwner = -1;
+								P.Owned = false;
+								listPlayer[id].Cash = listPlayer[id].Cash  + P.Prix[6];
 								}
 							if(saisie.Key == ConsoleKey.B)
 							{
-										// si non
+								bool end = false;
+								int nb = 0;
+								do
+								{
+									Console.WriteLine("How many houses do you want to buy ? price per house: " + P.Prix[7]+"\nTo Cancel, insert 0");
+									do
+									{
+										nb = Convert.ToInt32(Console.ReadLine());
+									} while (nb < 0 && (nb+ P.NbHouse) > 5);
+									Console.WriteLine("\n\nYou'll have to pay: " + nb * P.Prix[7]);
+									if(listPlayer[id].Cash>nb*P.Prix[7])
+									{
+										end = true;
+										listPlayer[id].Cash = listPlayer[id].Cash - (nb * P.Prix[7]);
+										P.NbHouse += nb;
+										Console.WriteLine("Success, " + P.NameCase + " contain now " + P.NbHouse + " houses");
+									}
+								} while (!end);
 								}
 							if(saisie.Key == ConsoleKey.Escape)
 							{
-
+							
 							}
 
 						}
 						else
 						{
 							Console.WriteLine("Owned by:  "+listPlayer[P.IDOwner].Username+"\nYou need to pay: "+ P.Prix[P.NbHouse]);
-
+							Console.WriteLine("Press any touch to play " + P.Prix[P.NbHouse] + " to " + listPlayer[P.IDOwner].Username);
+							
+							listPlayer[id].Cash = listPlayer[id].Cash - P.Prix[P.NbHouse];
+							listPlayer[P.IDOwner].Cash = listPlayer[P.IDOwner].Cash + P.Prix[P.NbHouse];
+							
 						}
 
 					}
@@ -193,13 +218,14 @@ namespace MONOPOLY_D_PATTERN
 								Console.WriteLine("You refused to buy " + plateau.nameCase(listPlayer[id].Position));
 									}
 
+
 							
-								
-                        }
+						}
                         else
                         {
                             Console.WriteLine("You can't afford this property. The price: "+ P.Prix[6]);
-                        }
+							
+						}
 						
 					}
 
@@ -209,7 +235,7 @@ namespace MONOPOLY_D_PATTERN
 					
 
 				}
-					Console.ReadKey();
+				Console.ReadKey();
 			} while (mesDe.Doubler && !mesDe.Stop);
 		}
 
@@ -226,9 +252,9 @@ namespace MONOPOLY_D_PATTERN
 				Console.WriteLine("You're now free from jail ! ");
 				Console.WriteLine("Press any touch to launch the dice");
 				Console.ReadKey();
+				play(id);
 				
-				int forward = mesDe.PlayDe();
-				ListPlayer[id].Forward(forward);
+
 				Console.WriteLine("----------------------------------------------------");
 			}
 			else { 
@@ -243,13 +269,14 @@ namespace MONOPOLY_D_PATTERN
 				Console.ReadKey();
 				int forward = mesDe.PlayDe();
 				if (mesDe.Doubler) { listPlayer[id].Statut = 0;
-					ListPlayer[id].Forward(forward);
+					
 					Console.WriteLine("You did a double, you're free now");
+					play(id);
 				}
 				else { Console.WriteLine("You failed, you stay in jail"); }
 				Console.ReadKey();
 			}
-			//Fonction pour lancer le dé et essayer de sortir de prison
+			
 		}
 
 	}
