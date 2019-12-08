@@ -90,7 +90,7 @@ namespace MONOPOLY_D_PATTERN
 			if(position>39)
 			{
 				cash = cash + 200;
-				position = position - 39;
+				position = position - 40;
 			}
 			if(position == 30)
 			{
