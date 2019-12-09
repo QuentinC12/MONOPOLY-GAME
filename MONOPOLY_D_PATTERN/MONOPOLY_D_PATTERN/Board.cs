@@ -7,12 +7,17 @@ using System.IO;
 
 namespace MONOPOLY_D_PATTERN
 {
-    class Board
+    //Singleton pattern : only one instance of the board must be created
+    //We chose to implement the thread safety singleton pattern
+    sealed class Board
     {
         private Case[] plateau; //Plateau de jeu avec 39 cases.
                                 // UTILISER LE DESIGN PATTERN SINGLETON POUR S'ASSURER QU'ON A QU'UNE INSTANCE DE CETTE CLASSE.
+        private static Board instance=null;
+        private static readonly object padlock = new object();
 
-        public Board()
+        //Private constructor
+        private Board()
         {
             initiateBoard();
 
@@ -78,6 +83,22 @@ namespace MONOPOLY_D_PATTERN
         {
             get { return this.plateau; }
             set { plateau = value; }
+        }
+
+        //Instance property to make the Singleton pattern work
+        public static Board Instance
+        {
+            get {
+                lock(padlock)
+                {
+                    if (instance == null)
+                    {
+                        instance = new Board();
+                    }
+                    return instance;
+                }
+                
+            }
         }
 		
     }

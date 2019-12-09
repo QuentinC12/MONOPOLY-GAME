@@ -21,7 +21,7 @@ namespace MONOPOLY_D_PATTERN
 			tour = 0;
 			listPlayer = new Player[nbPlayer];
 			initiatePlayers(nbPlayer);
-			plateau = new Board();
+			plateau = Board.Instance;
 			victoryConditions = false;
 
 		}
