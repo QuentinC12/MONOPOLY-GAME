@@ -55,7 +55,13 @@ namespace MONOPOLY_D_PATTERN
         }
         public List<string[]> ReadFile()
         {
-            StreamReader sr = new StreamReader("Monop.csv");
+			if (!File.Exists("Monop.csv")) {
+				Console.WriteLine("We download the files");
+				System.Net.WebClient client = new System.Net.WebClient();
+				client.DownloadFile("https://raw.githubusercontent.com/QuentinC12/MONOPOLY-GAME/master/MONOPOLY_D_PATTERN/MONOPOLY_D_PATTERN/Monop.csv", "Monop.csv");
+				
+			}
+				StreamReader sr = new StreamReader("Monop.csv");
             string line;
             string[] row = new string[11];
             List<string[]> data = new List<string[]>();
