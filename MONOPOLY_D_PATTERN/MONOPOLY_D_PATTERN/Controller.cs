@@ -184,7 +184,7 @@ namespace MONOPOLY_D_PATTERN
 						else
 						{
 							Console.WriteLine("Owned by:  "+listPlayer[P.IDOwner].Username+"\nYou need to pay: "+ P.Prix[P.NbHouse]);
-							Console.WriteLine("Press any touch to play " + P.Prix[P.NbHouse] + " to " + listPlayer[P.IDOwner].Username);
+							Console.WriteLine("Press any touch to pay " + P.Prix[P.NbHouse] + " to " + listPlayer[P.IDOwner].Username);
 							
 							listPlayer[id].Cash = listPlayer[id].Cash - P.Prix[P.NbHouse];
 							listPlayer[P.IDOwner].Cash = listPlayer[P.IDOwner].Cash + P.Prix[P.NbHouse];
