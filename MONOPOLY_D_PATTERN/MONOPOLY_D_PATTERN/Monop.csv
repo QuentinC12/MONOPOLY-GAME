@@ -3,7 +3,7 @@
 2,E,Caisse de communaute,,,,,,,,
 3,P,Lecourbes,8,20,60,180,320,450,60,50
 4,E,Impots,,,,,,,,
-5,E,Gare Montparnasse,,,,,,,,
+5,G,Gare Montparnasse,,,,,,,,
 6,P,Vaugirard,12,30,90,270,400,550,100,50
 7,C,Carte Chance,,,,,,,,
 8,P,Courcelle,12,30,90,270,400,550,100,50
@@ -13,7 +13,7 @@
 12,E,Electricite,,,,,,,,
 13,P,Neuilly,20,50,150,450,625,750,140,100
 14,P,Paradis,24,60,180,500,700,900,160,100
-15,E,Gare de Lyon,,,,,,,,
+15,G,Gare de Lyon,,,,,,,,
 16,P,Mozart,28,70,200,550,750,950,180,100
 17,E,Caisse de communaute,,,,,,,,
 18,P,Saint Michel,28,70,200,550,750,950,180,100
@@ -23,7 +23,7 @@
 22,C,Carte Chance,,,,,,,,
 23,P,Malesherbes,36,90,250,700,875,1050,220,150
 24,P,Henri Martin,40,100,300,750,925,1100,240,150
-25,E,Gare du Nord,,,,,,,,
+25,G,Gare du Nord,,,,,,,,
 26,P,Saint Honore,44,110,330,800,975,1150,240,150
 27,P,La Bourse,44,110,330,800,975,1150,240,150
 28,E,Cie des Eaux,,,,,,,,
@@ -33,7 +33,7 @@
 32,P,Foch,52,130,390,900,1100,1275,300,200
 33,E,Caisse de communaute,,,,,,,,
 34,P,Capucines,56,150,450,1000,1200,1400,320,200
-35,E,Gare Saint Lazare,,,,,,,,
+35,G,Gare Saint Lazare,,,,,,,,
 36,C,Carte Chance,,,,,,,,
 37,P,Champs Elysees,70,175,500,1100,1300,1500,350,200
 38,E,Taxe de Luxe,,,,,,,,
