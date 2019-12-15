@@ -13,6 +13,9 @@ The following link is the final project with its implementation with unity :
 https://github.com/QuentinC12/MONOPOLY-GAME-UNITY
 
 ## UML of the project : 
+![](UML/Monopoly-3.png)
+
+Precision about the UML : in classes Controller, EndMenu, SetParameters and DiceRoller GameObject attributes (used in Unity) are not represented because there are too many of them
 
 ## Design patterns in the project : 
 -> Singleton pattern : used to restrict the instantiation of a class to one single instance.
