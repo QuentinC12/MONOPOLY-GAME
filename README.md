@@ -21,7 +21,7 @@ Precision about the UML : in classes Controller, EndMenu, SetParameters and Dice
 -> Singleton pattern : used to restrict the instantiation of a class to one single instance.
    We used twice : on the Board class (only one board needs to be created when we execute the program) and on the SetParameters class 
    
--> MVC (Model-View-Controller) pattern : in the first version we used it with the class Controller and we used it after that with Unity
+-> MVC (Model-View-Controller) pattern : in the first version we used it with the class Controller and we used it after that with Unity (it's better for the interface's quality)
 
 -> Simple factory pattern : we used it to create the cases of the board. We have a parent class Case with attributes ans methods and children classes for the different types of cases and their different behavior (Properties, Jail ...) 
 
