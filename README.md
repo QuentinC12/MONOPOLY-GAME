@@ -19,7 +19,7 @@ Precision about the UML : in classes Controller, EndMenu, SetParameters and Dice
 
 ## Design patterns in the project : 
 -> Singleton pattern : used to restrict the instantiation of a class to one single instance.
-   We used twice : on the Board class (only one board needs to be created when we execute the program) and on the 
+   We used twice : on the Board class (only one board needs to be created when we execute the program) and on the SetParameters class 
    
 -> MVC (Model-View-Controller) pattern : in the first version we used it with the class Controller and we used it after that with Unity
 
