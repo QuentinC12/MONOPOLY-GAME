@@ -6,6 +6,11 @@ Welcome on our PROJECT
 <li>MAGARIAN Arnaud</li>
 <li>CALLAIS Quentin</li>
 </ul>
+## Link for the project with unity 
+We wanted to give you the visual studio version and the unity version. This github is the one with the visual studio version.
+The following link is the final project with its implementation with unity : 
+https://github.com/QuentinC12/MONOPOLY-GAME-UNITY
+
 
 ## UML of the project : 
 
