@@ -12,7 +12,6 @@ We wanted to give you the visual studio version and the unity version. This gith
 The following link is the final project with its implementation with unity : 
 https://github.com/QuentinC12/MONOPOLY-GAME-UNITY
 
-
 ## UML of the project : 
 
 ## Design patterns in the project : 
@@ -23,6 +22,6 @@ https://github.com/QuentinC12/MONOPOLY-GAME-UNITY
 
 -> Simple factory pattern : we used it to create the cases of the board. We have a parent class Case with attributes ans methods and children classes for the different types of cases and their different behavior (Properties, Jail ...) 
 
-
-
+## Precisions : 
+In order to create the board with the different types of cases, we wrote a csv file (you can find it in the github  : "Monop.csv")
 
